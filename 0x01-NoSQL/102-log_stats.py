@@ -1,4 +1,9 @@
-):
+#!/usr/bin/env python3
+""" Log stats - new version """
+from pymongo import MongoClient
+
+
+def nginx_stats_check():
     """ provides some stats about Nginx logs stored in MongoDB:"""
     client = MongoClient()
     collection = client.logs.nginx
